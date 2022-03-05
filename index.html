@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colordle</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+
+        <div id="logo-container">
+            <img id="logo" src="assets/colordle-logo.png" alt="colordle logo" />
+            <h1>Colordle</h1>
+        </div>
+
+        <div id="button-container">
+            <button id="help">
+                <img src="assets/help-icon.png" alt="help icon" />
+                <p>How To Play</p>
+            </button>
+
+            <button id="stats-button">
+                <img src="assets/stats-icon.png" alt="help icon" />
+                <p>Daily Stats</p>
+            </button>
+        </div>
+
+    </header>
+
+    <main>
+
+        <section id="wordle-box">
+
+            <div class="row">
+                <div class="box">
+                    <p id="11"></p>
+                </div>
+                <div class="box">
+                    <p id="12"></p>
+                </div>
+                <div class="box">
+                    <p id="13"></p>
+                </div>
+                <div class="box">
+                    <p id="14"></p>
+                </div>
+                <div class="box">
+                    <p id="15"></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="box">
+                    <p id="21"></p>
+                </div>
+                <div class="box">
+                    <p id="22"></p>
+                </div>
+                <div class="box">
+                    <p id="23"></p>
+                </div>
+                <div class="box">
+                    <p id="24"></p>
+                </div>
+                <div class="box">
+                    <p id="25"></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="box">
+                    <p id="31"></p>
+                </div>
+                <div class="box">
+                    <p id="32"></p>
+                </div>
+                <div class="box">
+                    <p id="33"></p>
+                </div>
+                <div class="box">
+                    <p id="34"></p>
+                </div>
+                <div class="box">
+                    <p id="35"></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="box">
+                    <p id="41"></p>
+                </div>
+                <div class="box">
+                    <p id="42"></p>
+                </div>
+                <div class="box">
+                    <p id="43"></p>
+                </div>
+                <div class="box">
+                    <p id="44"></p>
+                </div>
+                <div class="box">
+                    <p id="45"></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="box">
+                    <p id="51"></p>
+                </div>
+                <div class="box">
+                    <p id="52"></p>
+                </div>
+                <div class="box">
+                    <p id="53"></p>
+                </div>
+                <div class="box">
+                    <p id="54"></p>
+                </div>
+                <div class="box">
+                    <p id="55"></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="box">
+                    <p id="61"></p>
+                </div>
+                <div class="box">
+                    <p id="62"></p>
+                </div>
+                <div class="box">
+                    <p id="63"></p>
+                </div>
+                <div class="box">
+                    <p id="64"></p>
+                </div>
+                <div class="box">
+                    <p id="65"></p>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="keyboard">
+
+            <div class="keyboard-row">
+                <button class="key">q</button>
+                <button class="key">w</button>
+                <button class="key">e</button>
+                <button class="key">r</button>
+                <button class="key">t</button>
+                <button class="key">y</button>
+                <button class="key">u</button>
+                <button class="key">i</button>
+                <button class="key">o</button>
+                <button class="key">p</button>
+            </div>
+
+            <div class="keyboard-row">
+                <button class="key">a</button>
+                <button class="key">s</button>
+                <button class="key">d</button>
+                <button class="key">f</button>
+                <button class="key">g</button>
+                <button class="key">h</button>
+                <button class="key">j</button>
+                <button class="key">k</button>
+                <button class="key">l</button>
+            </div>
+
+            <div class="keyboard-row">
+                <button class="long-key" id="back">BACK</button>
+
+                <button class="key">z</button>
+                <button class="key">x</button>
+                <button class="key">c</button>
+                <button class="key">v</button>
+                <button class="key">b</button>
+                <button class="key">n</button>
+                <button class="key">m</button>
+
+                <button class="long-key" id="enter">ENTER</button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <section id="popup">
+        <button id="exit">&times;</button>
+        <p>The goal of the game is to guess the correct word.</p>
+        <p style="width: 80%;">The rules are the same as Wordle, but the colors change every time you play. There is always one color for a letter in the correct spot, a letter in the incorrect spot, and an incorrect letter, however you have to figure out which color is which.</p>
+        <p style="font-weight: bold; font-size: 1.2rem;">Good Luck!</p>
+        <p style="margin-bottom: 15px; margin-top: 5px !important; font-weight: bold;">- Tanner Kopel, 17 year old developer</p>
+    </section>
+
+    <section id="stats">
+        <button id="stats-exit">&times;</button>
+        <p>Stats are comming soon</p>
+        <p style="margin-bottom: 15px; margin-top: 5px !important; font-weight: bold;">- Tanner Kopel, 17 year old developer</p>
+    </section>
+
+    <section id="message">
+        <p>Great Job!</p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
