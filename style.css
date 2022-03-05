@@ -221,10 +221,10 @@ main {
     color: rgba(255, 255, 255, 0);
     border-radius: 8px;
     height: 50px;
-    width: 125px;
+    width: 200px;
     position: absolute;
     top: 22%;
-    left: 45.85%;
+    left: 43.35%;
     display: flex;
     align-items: center;
     justify-content: center;

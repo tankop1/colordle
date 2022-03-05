@@ -64,8 +64,9 @@ function getCurrentWord(row) {
 
 function changeKeyColor(keyText, color) {
     $('.key').each((i, key) => {
-        if ($(key).text() == keyText) {
-            $(key).css({'background-color': color});
+        if ($(key).text().toLowerCase() == keyText.toLowerCase()) {
+            console.log('MATCH: ' + color);
+            $(key).css({'background-color': "#" + color});
         }
     });
 }
@@ -94,16 +95,21 @@ function applyColors(row) {
 }
 
 function win() {
+    $('#message p').text('Great Job!');
     $('#message').css({'animation': 'messageIn 0.5s 1'});
     setTimeout(() => {
         $('#message').css({'background-color': 'black'});
         $('#message').css({'color': 'white'});
     }, 0.5);
+}
 
+function lose() {
+    $('#message p').text('Maybe Next Time!');
+    $('#message').css({'animation': 'messageIn 0.5s 1'});
     setTimeout(() => {
-        $('#message').css({'background-color': 'rgba(0, 0, 0, 0)'});
-        $('#message').css({'color': 'rgba(255, 255, 255, 0)'});
-    }, 1);
+        $('#message').css({'background-color': 'black'});
+        $('#message').css({'color': 'white'});
+    }, 0.5);
 }
 
 function enterPressed() {
@@ -117,8 +123,14 @@ function enterPressed() {
     }
 
     if (currentWord.length == 5) {
-        currentRow++;
-        currentColumn = 1;
+        if (currentRow == 6) {
+            lose();
+        }
+
+        else {
+            currentRow++;
+            currentColumn = 1;
+        }
     }
 
     else {
