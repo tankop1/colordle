@@ -122,7 +122,7 @@ function enterPressed() {
         win();
     }
 
-    if (currentWord.length == 5) {
+    else if (currentWord.length == 5) {
         if (currentRow == 6) {
             lose();
         }
