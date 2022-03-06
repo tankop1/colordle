@@ -4,9 +4,9 @@ correctColor = Math.floor(Math.random()*16777215).toString(16);
 placeColor = Math.floor(Math.random()*16777215).toString(16);
 wrongColor = Math.floor(Math.random()*16777215).toString(16);
 
-wordList = ['rupee', 'vivid', 'flour', 'twerp'];
+wordList = ["cigar","rebut","sissy","humph","awake","blush","focal","evade","naval","serve","heath","dwarf","model","karma","stink","grade","quiet","bench","abate","feign","major","death","fresh","crust","stool","colon","abase","marry","react"];
 keyList = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm'];
-dailyWord = wordList[2].toUpperCase();
+dailyWord = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
 
 function keyPressed(event) {
     key = $(event.target).text();
@@ -65,7 +65,6 @@ function getCurrentWord(row) {
 function changeKeyColor(keyText, color) {
     $('.key').each((i, key) => {
         if ($(key).text().toLowerCase() == keyText.toLowerCase()) {
-            console.log('MATCH: ' + color);
             $(key).css({'background-color': "#" + color});
         }
     });
@@ -110,11 +109,12 @@ function lose() {
         $('#message').css({'background-color': 'black'});
         $('#message').css({'color': 'white'});
     }, 0.5);
+
+    console.log('TODAYS WORD: ' + dailyWord);
 }
 
 function enterPressed() {
     currentWord = getCurrentWord(currentRow);
-    console.log(currentWord);
 
     applyColors(currentRow);
 
