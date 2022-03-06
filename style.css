@@ -250,6 +250,30 @@ main {
     }
 }
 
+#mobile-block {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#mobile-block p {
+    text-align: center;
+    width: 85%;
+    margin-top: 20px;
+}
+
+#block-logo {
+    width: 75px;
+    margin-bottom: 10px;
+}
+
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 735px) {
@@ -288,5 +312,11 @@ main {
 
     #button-container {
         width: 75px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #mobile-block {
+        display: flex;
     }
 }
