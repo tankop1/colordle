@@ -6,7 +6,7 @@ wrongColor = Math.floor(Math.random()*16777215).toString(16);
 
 wordList = ['rupee', 'vivid', 'flour', 'twerp'];
 keyList = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm'];
-dailyWord = wordList[3].toUpperCase();
+dailyWord = wordList[2].toUpperCase();
 
 function keyPressed(event) {
     key = $(event.target).text();

@@ -230,7 +230,7 @@ main {
     width: 200px;
     position: absolute;
     top: 22%;
-    left: 43.35%;
+    left: calc(50% - 100px);
     display: flex;
     align-items: center;
     justify-content: center;
