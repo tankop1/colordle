@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colordle</title>
+    <title>Colordle - By Tanner Kopel</title>
 
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -28,18 +28,18 @@
 
         <div id="logo-container">
             <img id="logo" src="assets/colordle-logo.png" alt="colordle logo" />
-            <h1>Colordle - By Tanner Kopel</h1>
+            <h1>Colordle</h1>
         </div>
 
         <div id="button-container">
             <button id="help">
                 <img src="assets/help-icon.png" alt="help icon" />
-                <p>How To Play</p>
+                <p class="disappear-on-600">How To Play</p>
             </button>
 
             <button id="stats-button">
                 <img src="assets/stats-icon.png" alt="help icon" />
-                <p>Daily Stats</p>
+                <p class="disappear-on-600">Daily Stats</p>
             </button>
         </div>
 
@@ -206,7 +206,7 @@
 
     <section id="popup">
         <button id="exit">&times;</button>
-        <p>The goal of the game is to guess the correct word.</p>
+        <p id="popup-top">The goal of the game is to guess the correct word.</p>
         <p style="width: 80%;">The rules are the same as Wordle, but the colors change every time you play. There is always one color for a correct letter in the correct spot, a correct letter in the incorrect spot, and an incorrect letter, however you have to figure out which color is which.</p>
         <p>Also, guesses do not have to be a valid word.</p>
         <p style="font-weight: bold; font-size: 1.2rem;">Good Luck!</p>
