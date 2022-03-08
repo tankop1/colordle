@@ -274,7 +274,7 @@ main {
     margin-bottom: 10px;
 }
 
-/* MEDIA QUERIES */
+/* MEDIA QUERIES - WIDTH */
 
 @media only screen and (max-width: 735px) {
     #wordle-box {
@@ -318,5 +318,29 @@ main {
 @media only screen and (max-width: 500px) {
     #mobile-block {
         display: flex;
+    }
+}
+
+/* MEDIA QUERIES - HEIGHT */
+
+@media only screen and (max-height: 850px) {
+    #keyboard {
+        margin-top: 200px;
+    }
+}
+
+@media only screen and (max-height: 800px) {
+    #wordle-box {
+        transform: scale(0.85);
+    }
+}
+
+@media only screen and (max-height: 700px) {
+    #wordle-box {
+        transform: scale(0.75);
+    }
+
+    #keyboard {
+        transform: scale(0.75);
     }
 }
